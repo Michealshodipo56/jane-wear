@@ -76,3 +76,14 @@
 .gallery-empty button{border:0;background:transparent;padding-left:0;padding-right:0}
 @media(max-width:800px){.gallery-search{grid-template-columns:1fr auto}.gallery-search-field{grid-column:1/-1;grid-row:2}.gallery-search p{text-align:right}}
 @media(max-width:700px){.gallery-more{margin-top:42px}.gallery-more .button{width:100%}.gallery-search{gap:14px;margin-bottom:28px}.gallery-search label{font-size:1.8rem}}
+
+/* Compact lookbook intro keeps the outfits close to the first screen. */
+.lookbook-heading{max-width:none;display:grid;grid-template-columns:minmax(0,.9fr) minmax(360px,.72fr);align-items:end;gap:clamp(50px,9vw,150px);padding-top:52px;padding-bottom:40px;border-bottom:1px solid #17141120}
+.lookbook-heading .eyebrow{margin-bottom:17px}
+.lookbook-heading h1{font-size:clamp(3.8rem,6vw,6.5rem);margin-bottom:0}
+.lookbook-heading-copy{max-width:520px;padding-bottom:6px}
+.lookbook-heading-copy>p:first-child{font-size:1rem;line-height:1.7}
+.lookbook-heading .notice{margin-top:20px;padding:12px 17px}
+.lookbook-heading+.gallery-section{padding-top:48px}
+@media(max-width:850px){.lookbook-heading{grid-template-columns:1fr;gap:24px;padding-top:45px;padding-bottom:32px}.lookbook-heading h1{font-size:clamp(3.5rem,10vw,5.4rem)}.lookbook-heading-copy{max-width:600px}.lookbook-heading .notice{margin-top:15px}.lookbook-heading+.gallery-section{padding-top:38px}}
+@media(max-width:700px){.lookbook-heading{padding-top:38px;padding-bottom:28px}.lookbook-heading .eyebrow{margin-bottom:12px}.lookbook-heading h1{font-size:3.25rem}.lookbook-heading-copy>p:first-child{font-size:.9rem}.lookbook-heading .notice{padding:11px 14px}.lookbook-heading+.gallery-section{padding-top:32px}}
