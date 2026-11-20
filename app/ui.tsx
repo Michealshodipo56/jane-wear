@@ -59,6 +59,31 @@ export function Collections(){
     </div>
   </section>
 }
-export function Gallery(){const [filter,setFilter]=useState('All');useEffect(()=>{const category=new URLSearchParams(location.search).get('category');if(category&&categories.includes(category))setFilter(category)},[]);return <><div className="filters" aria-label="Filter inspiration">{['All',...categories].map(c=><button key={c} aria-pressed={filter===c} onClick={()=>setFilter(c)}>{c}</button>)}</div><div className="lookbook">{looks.filter(l=>filter==='All'||l.category===filter).map((l,i)=><Link className={'look look-'+i} key={l.slug} href={'/our-work/'+l.slug}><div><img src={'/images/'+l.image} alt={l.description} loading="lazy"/><span className="look-open">Explore the look ↗</span></div><p><span>{l.title}</span><small>{l.category}</small></p></Link>)}</div></>}
+export function Gallery({preview=false}:{preview?:boolean}){
+  const [filter,setFilter]=useState('All');
+  const [query,setQuery]=useState('');
+  useEffect(()=>{
+    if(preview)return;
+    const category=new URLSearchParams(location.search).get('category');
+    if(category&&categories.includes(category))setFilter(category);
+  },[preview]);
+  const search=query.trim().toLocaleLowerCase();
+  const matching=looks.filter(look=>(filter==='All'||look.category===filter)&&(
+    !search||[look.title,look.category,look.description].some(value=>value.toLocaleLowerCase().includes(search))
+  ));
+  const shown=preview?matching.slice(0,3):matching;
+  return <>
+    {!preview&&<div className="gallery-search">
+      <label htmlFor="look-search">Find a style</label>
+      <div className="gallery-search-field">
+        <input id="look-search" type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Search styles, outfits, and details" autoComplete="off"/>
+        <span aria-hidden="true">⌕</span>
+      </div>
+      <p role="status">{matching.length} {matching.length===1?'look':'looks'} found</p>
+    </div>}
+    <div className="filters" aria-label="Filter inspiration">{['All',...categories].map(category=><button key={category} aria-pressed={filter===category} onClick={()=>setFilter(category)}>{category}</button>)}</div>
+    {shown.length>0?<div className="lookbook">{shown.map((look,index)=><Link className={'look look-'+index} key={look.slug} href={'/our-work/'+look.slug}><div><img src={'/images/'+look.image} alt={look.description} loading="lazy"/><span className="look-open">Explore the look ↗</span></div><p><span>{look.title}</span><small>{look.category}</small></p></Link>)}</div>:<div className="gallery-empty"><h2>No looks found.</h2><p>Try another search or browse all styles.</p><button type="button" className="text-link" onClick={()=>{setQuery('');setFilter('All')}}>Show all looks ↗</button></div>}
+  </>;
+}
 export function Closing(){return <section className="closing"><span className="eyebrow">YOUR NEXT CHAPTER, BEAUTIFULLY TAILORED.</span><h2>MADE <em>FOR</em> YOU.</h2><p>Your next favorite outfit begins with a conversation.</p><Link className="button light" href="/request">Let’s Create Something ↗</Link></section>}
 export function Process(){return <section className="process section"><div data-reveal><span className="eyebrow">THE BESPOKE JOURNEY</span><h2>From fabric<br/><em>to form.</em></h2><p>A thoughtful process.<br/>A piece that feels entirely yours.</p><Link className="text-link" href="/request">Begin your story ↗</Link><div className="process-gallery">{[["process-sketch.png","Fashion design sketch for an Ankara gown","The idea"],["process-fabric.png","Ankara fabric, scissors and dressmaking tools","The fabric"],["process-finished.png","Finished Ankara outfit worn by a model","The form"]].map(([image,alt,label])=><figure key={image}><img src={"/images/"+image} alt={alt} loading="lazy"/><figcaption>{label}</figcaption></figure>)}</div></div><div className="process-steps">{[['The idea','A conversation about your inspiration, your occasion, and how you want to feel.'],['The fabric','Explore the colors, textures, and prints that bring your vision into focus.'],['The craft','Measurements, pattern cutting, and considered construction give your idea its shape.'],['The final fit','The finishing touches. A considered fit. A creation that belongs to you.']].map(([title,copy],i)=><article data-reveal key={title}><span className="step-number">0{i+1}</span><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div></section>}

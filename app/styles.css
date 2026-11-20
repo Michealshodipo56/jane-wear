@@ -60,3 +60,19 @@
 @media(max-width:1050px){.collections{gap:5%}.collection-photo{height:530px}}
 @media(max-width:700px){.collections{grid-template-columns:1fr;gap:30px}.collection-copy h2{font-size:3.3rem}.collection-photo{height:min(118vw,560px)}.collection-tabs button{font-size:1.55rem}.collection-credit{margin-top:7px!important}}
 @media(prefers-reduced-motion:reduce){.collection-photo img,.collection-progress span,.collection-control-buttons button{transition:none}}
+
+.gallery-more{display:flex;justify-content:center;margin-top:66px}
+.gallery-more .button{min-width:220px}
+.gallery-search{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,430px) auto;align-items:center;gap:22px;margin-bottom:34px}
+.gallery-search label{font-family:'Bodoni Moda',Georgia,serif;font-size:clamp(1.6rem,2.4vw,2.4rem);line-height:1.15}
+.gallery-search-field{position:relative}
+.gallery-search input{width:100%;min-height:52px;padding:12px 45px 12px 16px;border:1px solid #17141155;border-radius:0;background:transparent;color:var(--ink);font-size:.85rem}
+.gallery-search input::placeholder{color:#776c61}
+.gallery-search-field span{position:absolute;right:15px;top:50%;transform:translateY(-52%);font-size:1.7rem;line-height:1;pointer-events:none}
+.gallery-search p{white-space:nowrap;font-size:.75rem;color:var(--muted)}
+.gallery-empty{text-align:center;padding:85px 20px;border:1px solid #17141125}
+.gallery-empty h2{font-size:2.8rem}
+.gallery-empty p{margin:12px 0 24px}
+.gallery-empty button{border:0;background:transparent;padding-left:0;padding-right:0}
+@media(max-width:800px){.gallery-search{grid-template-columns:1fr auto}.gallery-search-field{grid-column:1/-1;grid-row:2}.gallery-search p{text-align:right}}
+@media(max-width:700px){.gallery-more{margin-top:42px}.gallery-more .button{width:100%}.gallery-search{gap:14px;margin-bottom:28px}.gallery-search label{font-size:1.8rem}}
