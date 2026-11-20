@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Jane Wears monogram">
-  <rect width="96" height="96" rx="20" fill="#171411"/>
-  <path d="M21 19h31M42 19v43c0 11-7 17-17 17-6 0-11-2-15-7" fill="none" stroke="#F5F0E7" stroke-width="5" stroke-linecap="square" stroke-linejoin="round"/>
-  <path d="M48 37l10 37 13-28 9 28 10-37" fill="none" stroke="#AD8255" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-  <circle cx="21" cy="19" r="3" fill="#AD8255"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Jane Wears monogram">
+  <circle cx="60" cy="60" r="60" fill="#171411"/>
+  <circle cx="60" cy="60" r="53.5" fill="none" stroke="#AD8255" stroke-width="3.2"/>
+  <circle cx="60" cy="60" r="47.8" fill="none" stroke="#F5F0E7" stroke-width="1.5" stroke-dasharray="2.8 3.6" stroke-linecap="square"/>
+  <path fill="#F5F0E7" d="M66.12 79.80 52.85 41.00H48.06V39.80H89.70V41.00H76.16L86.24 70.86L96.96 41.00H92.19V39.80H102.61V41.00H98.30L84.40 79.80H82.28L68.98 41.00H60.50L70.60 70.86L75.64 56.92L76.32 58.91L68.71 79.80ZM80.16 54.83 79.08 53.99 84.01 40.22 85.31 40.46Z"/>
+  <path fill="#F5F0E7" d="M43.07 39.80V40.97H37.94V69.52Q37.36 71.17 36.50 72.96Q35.63 74.74 34.38 76.30Q33.13 77.86 31.37 78.83Q29.61 79.80 27.21 79.80Q24.85 79.80 23.09 78.93Q21.34 78.06 20.36 76.63Q19.39 75.20 19.39 73.53Q19.39 72.23 19.94 71.28Q20.48 70.33 21.38 69.83Q22.27 69.32 23.31 69.32Q24.22 69.32 25.12 69.75Q26.02 70.19 26.61 71.05Q27.21 71.92 27.21 73.20Q27.21 74.46 26.60 75.31Q26.00 76.15 25.05 76.55Q24.11 76.95 23.04 76.89Q22.60 76.82 22.20 76.47Q21.79 76.12 21.68 75.62Q22.05 76.46 22.80 77.12Q23.54 77.78 24.53 78.17Q25.51 78.55 26.62 78.55Q28.57 78.55 29.56 77.53Q30.55 76.50 30.91 74.28Q31.26 72.06 31.26 68.50V40.97H24.59V39.80Z"/>
 </svg>

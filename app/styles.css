@@ -17,16 +17,16 @@
 @media(max-width:800px){.tailor-tape__values{grid-template-columns:repeat(2,minmax(0,1fr))}.tailor-tape__value{min-height:48px;border-bottom:1px solid #6f5d3c35}.tailor-tape__value:nth-child(3){border-left:0}.tailor-tape__value:nth-child(n+3){border-bottom:0}}
 @media(max-width:420px){.tailor-tape__value{font-size:.58rem;letter-spacing:.06em;gap:8px;padding:8px 10px}.tailor-tape__number{font-size:1.2rem}}
 
-.logo{display:inline-flex;align-items:center;flex-wrap:wrap;column-gap:11px;max-width:215px}
-.logo-mark{width:39px;height:39px;flex:none;border-radius:8px}
-.logo span{flex-basis:100%;margin-left:50px;margin-top:2px;white-space:nowrap}
+.logo{display:inline-flex;align-items:center;flex-wrap:wrap;column-gap:12px;max-width:236px}
+.logo-mark{width:46px;height:46px;flex:none;border-radius:50%}
+.logo span{flex-basis:100%;margin-left:58px;margin-top:2px;white-space:nowrap}
 .process-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:43px;max-width:530px}
 .process-gallery figure{min-width:0;margin:0;position:relative;overflow:hidden;background:#d8c9b8;aspect-ratio:4 / 5}
 .process-gallery figure:nth-child(2){transform:translateY(16px)}
 .process-gallery img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
 .process-gallery figure:hover img{transform:scale(1.06)}
 .process-gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:18px 7px 7px;background:linear-gradient(transparent,#171411b0);color:white;font-size:.68rem;text-align:center;letter-spacing:.04em}
-@media(max-width:700px){.process-gallery{margin-top:32px}.logo-mark{width:34px;height:34px}.logo span{margin-left:45px}}
+@media(max-width:700px){.process-gallery{margin-top:32px}.logo-mark{width:40px;height:40px}.logo span{margin-left:52px}}
 @media(prefers-reduced-motion:reduce){.process-gallery img{transition:none}}
 
 /* The collection explorer reads like a small editorial lookbook. */
