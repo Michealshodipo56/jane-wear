@@ -17,6 +17,7 @@
 @media(max-width:800px){.tailor-tape__values{grid-template-columns:repeat(2,minmax(0,1fr))}.tailor-tape__value{min-height:48px;border-bottom:1px solid #6f5d3c35}.tailor-tape__value:nth-child(3){border-left:0}.tailor-tape__value:nth-child(n+3){border-bottom:0}}
 @media(max-width:420px){.tailor-tape__value{font-size:.58rem;letter-spacing:.06em;gap:8px;padding:8px 10px}.tailor-tape__number{font-size:1.2rem}}
 
+.intro-photo img{object-position:50% 42%}
 .logo{display:inline-flex;align-items:center;flex-wrap:wrap;column-gap:12px;max-width:236px}
 .logo-mark{width:46px;height:46px;flex:none;border-radius:50%}
 .logo span{flex-basis:100%;margin-left:58px;margin-top:2px;white-space:nowrap}
